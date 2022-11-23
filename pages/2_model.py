@@ -22,9 +22,9 @@ def predict(Mv,Hc,Skew,):
 
 st.title('Magnet quality')
 st.header('Enter the characteristics of the Magnet:')
-Mv = st.number_input('Mv: ', min_value=0, max_value=1)
+Mv = st.slider('Mv: ', min_value=0.0, max_value=1.0, step = 0.05)
 Hc = st.number_input('Hc: ', min_value=0, max_value=35)
-Skew = st.number_input('Skew: ', min_value=0, max_value=1.6)
+Skew = st.slider('Skew: ', min_value=0.0, max_value=1.6, step = 0.2)
 
 
 if st.button('Predict Jdp'):
