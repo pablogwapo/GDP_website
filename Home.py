@@ -1,10 +1,10 @@
 import streamlit as st
 
-st.write("# Welcome to Deep-MED! 👋")
+st.write("# Welcome to Group 48! 👋")
 st.markdown(
         
         """
-        Deep-Med is a revolutionary start-up that implements Machine Learning methods to solve real word problems in the medical field. 
+        Werevolutionary start-up that implements Machine Learning methods to optimize the performance of magnets in aerospace applications. 
        
         """
     )
