@@ -16,17 +16,17 @@ loaded_model.load_weights("model.h5")
 
 # Define the prediction function
 def predict(Mv,Hc,Skew,):
-    
-
     prediction = loaded_model.predict(pd.DataFrame([[Mv,Hc, Skew]], columns=['Mv', 'Hc', 'Skew']))
     return prediction
 
 
 st.title('Magnet quality')
 st.header('Enter the characteristics of the Magnet:')
-Mv = st.number_input('Mv: ', min_value=0.1, max_value=10.0, value=1.0)
+Mv = st.number_input('Mv: ', min_value=0.0, max_value=1)
+Hc = st.number_input('Hc: ', min_value=0.0, max_value=35)
+Skew = st.number_input('Skew: ', min_value=0.0, max_value=1.6)
 
 
-if st.button('Predict Price'):
-    price = predict(carat, cut, color, clarity, depth, table, x, y, z)
-    st.success(price)
+if st.button('Predict Jdp'):
+    Jdp = predict(Mv,Hc,Skew)
+    st.success(Jdp)
